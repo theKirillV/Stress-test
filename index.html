@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Test Your Side Project Idea</title>
+  <meta name="description" content="60-minute session to pressure-test your side project idea. Honest verdict: kill it, pivot it, or keep going. €75.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #fafaf9;
+      --bg-alt: #f5f5f4;
+      --bg-warm: #fdf2f8;
+      --bg-dark: #1c1917;
+      --text: #1c1917;
+      --text-muted: #57534e;
+      --accent: #c4285a;
+      --accent-hover: #a32048;
+      --accent-light: #fdf2f8;
+      --green: #16a34a;
+      --green-light: #f0fdf4;
+      --red: #dc2626;
+      --red-light: #fef2f2;
+      --border: #e7e5e4;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(2.25rem, 5.5vw, 3.25rem);
+      line-height: 1.15;
+      max-width: 640px;
+      margin: 0 auto 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .hero-kicker {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: var(--accent);
+      margin: 0 auto 32px;
+      max-width: 480px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(196, 40, 90, 0.25);
+    }
+
+    .cta-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(196, 40, 90, 0.3);
+    }
+
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+
+    .price-note {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    /* Problem */
+    .problem p {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* What you get */
+    .what-you-get ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .what-you-get li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .what-you-get li::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+
+    .what-you-get li strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .what-you-get li span {
+      color: var(--text-muted);
+    }
+
+    .callout {
+      margin-top: 40px;
+      padding: 0 0 0 28px;
+      border: none;
+      background: none;
+      border-left: 3px solid var(--accent);
+    }
+
+    .callout p {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.35rem;
+      line-height: 1.5;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .callout .mark {
+      background: linear-gradient(to top, var(--accent-light) 40%, transparent 40%);
+      padding: 0 2px;
+    }
+
+    /* Audience */
+    .audience-heading {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.3;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .audience-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .audience-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text);
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .audience-list li:first-child {
+      padding-top: 0;
+    }
+
+    .audience-list li .arrow {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.1rem;
+      min-width: 20px;
+    }
+
+    .skip-block {
+      margin-top: 40px;
+      padding: 24px 28px;
+      background: var(--bg-alt);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .skip-block p.skip-heading {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .skip-block p.skip-item {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .skip-block p.skip-item + p.skip-item {
+      margin-top: 6px;
+    }
+
+    .skip-parenthetical {
+      font-style: italic;
+      opacity: 0.7;
+    }
+
+    /* Why me */
+    .why-me-intro {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .why-me-photo {
+      width: 72px;
+      height: 72px;
+      min-width: 72px;
+      border-radius: 50%;
+      background: var(--bg-alt);
+      border: 2px solid var(--border);
+      object-fit: cover;
+    }
+
+    .why-me-name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .why-me-title {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .why-me blockquote {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    .why-me blockquote p + p {
+      margin-top: 16px;
+    }
+
+    .why-me .highlight {
+      display: block;
+      margin-top: 24px;
+      font-weight: 600;
+      color: var(--accent);
+      font-style: normal;
+      font-size: 1.1rem;
+    }
+
+    /* How it works */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      counter-reset: step;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px 0;
+    }
+
+    .step + .step {
+      border-top: 1px solid var(--border);
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .step-content h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* CTA bottom */
+    .cta-section {
+      text-align: center;
+      padding: 80px 0;
+      background: var(--bg-dark);
+      border-top: none;
+    }
+
+    .cta-section h2 {
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .cta-section p {
+      color: #a8a29e;
+      margin-bottom: 32px;
+    }
+
+    .cta-section + section {
+      border-top: none;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      padding: 24px 0;
+    }
+
+    .faq-item + .faq-item {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      cursor: default;
+    }
+
+    .faq-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer a:hover {
+      color: var(--text-muted);
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .hero {
+        padding: 72px 0 56px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      .cta-btn {
+        padding: 14px 32px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <h1>Is your side project worth your nights and weekends?</h1>
+      <p class="hero-kicker">Let's find out in 60 minutes.</p>
+      <p>I've started 30+ side projects. Shipped about half. Killed the rest after talking to potential customers and realizing nobody needed them. That's the skill: knowing when to stop. I do that for other people now.</p>
+      <a href="https://buy.stripe.com/dRmaEX03agOx8Nl5andAk04" class="cta-btn">Book a session &middot; €75</a>
+      <span class="price-note">One hour. You'll know whether to keep going.</span>
+    </div>
+  </header>
+
+  <!-- Problem -->
+  <section class="problem">
+    <div class="container">
+      <p>You've been building on evenings and weekends. You've shown it to friends. They said "looks cool." But you still have this nagging feeling: will anyone actually use this?</p>
+      <p style="margin-top: 16px;">You could spend 3 more months building and find out. Or you could find out in 60 minutes.</p>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="what-you-get">
+    <div class="container">
+      <div class="section-label">What you get</div>
+      <ul>
+        <li>
+          <div>
+            <strong>60-minute video call</strong>
+            <span>where I pick apart your idea, who it's for, and whether they'll pay</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>A clear answer: kill it, change direction, or go harder</strong>
+            <span>with reasons, not opinions</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Written follow-up within 24 hours</strong>
+            <span>covering what I found and what to do about it</span>
+          </div>
+        </li>
+      </ul>
+      <div class="callout">
+        <p>If your idea has a fatal flaw, <span class="mark">I will say so.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience -->
+  <section class="audience">
+    <div class="container">
+      <h2 class="audience-heading">Book a session if&hellip;</h2>
+      <ul class="audience-list">
+        <li><span class="arrow">&rarr;</span> You're employed full-time and building something on the side</li>
+        <li><span class="arrow">&rarr;</span> You've been at it for weeks or months and aren't sure it's worth continuing</li>
+        <li><span class="arrow">&rarr;</span> You have ideas but can't figure out which one deserves your time</li>
+        <li><span class="arrow">&rarr;</span> You shipped an MVP but traction isn't happening and you don't know why</li>
+        <li><span class="arrow">&rarr;</span> You want someone who'll be straight with you, not just supportive</li>
+      </ul>
+      <div class="skip-block">
+        <p class="skip-heading">Probably not the right fit if&hellip;</p>
+        <p class="skip-item">You just want to hear "great idea!" — ask ChatGPT, it'll always say yes</p>
+        <p class="skip-item">You need a co-founder, a developer, or funding advice</p>
+        <p class="skip-item">You haven't thought about the idea at all yet. Give it another week first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Me -->
+  <section class="why-me">
+    <div class="container">
+      <div class="section-label">Why me</div>
+      <div class="why-me-intro">
+        <img src="KirillV.png" alt="Kirill" class="why-me-photo">
+        <div>
+          <div class="why-me-name">Kirill</div>
+          <div class="why-me-title">Senior Product Strategist</div>
+        </div>
+      </div>
+      <blockquote>
+        <p>I'm a UX designer. 14 years, 30+ side projects. I've built with most of the AI and no-code tools you're probably using right now.</p>
+        <p>I've sent 300+ cold emails to an audience that didn't care. Built products that got zero signups. Treated "nice feedback from friends" as validation, more than once.</p>
+        <p>I didn't make millions from side projects. I made every first-timer mistake there is, and now I can usually spot them in about 10 minutes.</p>
+        <span class="highlight">You're paying for 14 years of mistakes compressed into one hour.</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-label">How it works</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Book a 60-minute session</h3>
+            <p>€75. Pick a time that works for you.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Fill out a short intake form</h3>
+            <p>5 minutes. So I come prepared and we don't waste your time.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>We meet on video</h3>
+            <p>I ask the questions your friends won't. Structured, specific, based on what actually predicts whether a product will work.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Get your written summary</h3>
+            <p>Within 24 hours you get the writeup: what I found, what it means, what to do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="book">
+    <div class="container">
+      <h2>Stop wondering. Find out.</h2>
+      <p>€75 for an hour of honesty.</p>
+      <a href="https://buy.stripe.com/dRmaEX03agOx8Nl5andAk04" class="cta-btn">Book your session</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>"Can't I just ask ChatGPT?"</h3>
+          <p>You can. It'll tell you your idea is interesting and give you a balanced analysis. It won't tell you you're wasting your time. It hasn't built 30 things and watched most of them fail. It can't read between the lines of your answers and spot the assumptions you don't even know you're making.</p>
+        </div>
+        <div class="faq-item">
+          <h3>"What if you tell me to kill my project?"</h3>
+          <p>Then I saved you months of building something nobody wants. That's the most valuable outcome, even though it doesn't feel like it.</p>
+        </div>
+        <div class="faq-item">
+          <h3>"Do I need to have already built something?"</h3>
+          <p>No. Idea stage is fine. But you should have at least thought about who it's for and what problem it solves. If you just have a vague notion, spend another week thinking before booking.</p>
+        </div>
+        <div class="faq-item">
+          <h3>"What if I disagree with your verdict?"</h3>
+          <p>That's fine. You're buying my analysis and perspective, not a binding decision. You might see something I don't. But at minimum, you'll know exactly which assumptions you're betting on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><a href="https://buy.stripe.com/dRmaEX03agOx8Nl5andAk04">Book a session</a> &middot; Questions? <a href="mailto:hello@kirillv.com">hello@kirillv.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
