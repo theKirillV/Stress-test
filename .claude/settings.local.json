@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "WebFetch(domain:fonts.googleapis.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
