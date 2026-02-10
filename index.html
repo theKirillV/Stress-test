@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stress Test Your Side Project Idea</title>
-  <meta name="description" content="60-minute session to pressure-test your side project idea. Honest verdict: kill it, pivot it, or keep going. €75.">
+  <meta name="description" content="60-minute session to stress-test your side project idea and UX. Built with AI tools? I'll tell you what's broken. Kill it, pivot it, or keep going. €75.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
@@ -146,6 +146,41 @@
       font-size: 1.125rem;
       color: var(--text-muted);
       line-height: 1.8;
+    }
+
+    .problem ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .problem li {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .problem li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 11px;
+    }
+
+    .problem .problem-closer {
+      margin-top: 24px;
+      font-size: 1.05rem;
+      color: var(--text);
+      font-weight: 500;
     }
 
     /* What you get */
@@ -463,19 +498,27 @@
   <!-- Hero -->
   <header class="hero">
     <div class="container">
-      <h1>Is your side project worth your nights and weekends?</h1>
+      <h1>Is your side project worth your next 3 months?</h1>
+      <p>You built something with Cursor, Lovable, or Replit. It works. But you have no idea if anyone actually wants it &mdash; or why it feels off.</p>
       <p class="hero-kicker">Let's find out in 60 minutes.</p>
-      <p>I've started 30+ side projects. Shipped about half. Killed the rest after talking to potential customers and realizing nobody needed them. That's the skill: knowing when to stop. I do that for other people now.</p>
       <a href="https://buy.stripe.com/dRmaEX03agOx8Nl5andAk04" class="cta-btn">Book a session &middot; €75</a>
-      <span class="price-note">One hour. You'll know whether to keep going.</span>
+      <span class="price-note">One honest conversation. A clear answer.</span>
     </div>
   </header>
 
   <!-- Problem -->
   <section class="problem">
     <div class="container">
-      <p>You've been building on evenings and weekends. You've shown it to friends. They said "looks cool." But you still have this nagging feeling: will anyone actually use this?</p>
-      <p style="margin-top: 16px;">You could spend 3 more months building and find out. Or you could find out in 60 minutes.</p>
+      <p>You've been building on evenings and weekends. You showed it to friends. They said "looks cool." You asked ChatGPT &mdash; it said your idea is promising and gave you a balanced analysis.</p>
+      <p style="margin-top: 16px;">But none of them told you:</p>
+      <ul>
+        <li>Your signup flow kills 80% of users before they see any value</li>
+        <li>You're building 14 features when you don't know which 2 actually matter</li>
+        <li>Your app looks exactly like every other AI-generated product out there</li>
+        <li>You haven't talked to a single person who'd actually pay for this</li>
+      </ul>
+      <p>You can't see these problems. Not because you're bad at what you do &mdash; because you've never been trained to see them.</p>
+      <p class="problem-closer">I have. For 14 years.</p>
     </div>
   </section>
 
@@ -487,24 +530,30 @@
         <li>
           <div>
             <strong>60-minute video call</strong>
-            <span>where I pick apart your idea, who it's for, and whether they'll pay</span>
+            <span>I stress-test two things: whether your idea has legs, and whether your product works for real people. I ask the questions your friends won't.</span>
           </div>
         </li>
         <li>
           <div>
-            <strong>A clear answer: kill it, change direction, or go harder</strong>
-            <span>with reasons, not opinions</span>
+            <strong>UX and product review</strong>
+            <span>I look at your app through the eyes of someone with 14 years of product design experience. I'll show you what's broken that you can't see &mdash; the flows that confuse people, the layouts that bury your value, the AI-generated design patterns that make your product look like everyone else's.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>A clear verdict: kill it, change direction, or go harder</strong>
+            <span>With specific reasons, not opinions.</span>
           </div>
         </li>
         <li>
           <div>
             <strong>Written follow-up within 24 hours</strong>
-            <span>covering what I found and what to do about it</span>
+            <span>What I found, what it means, and exactly what to do next.</span>
           </div>
         </li>
       </ul>
       <div class="callout">
-        <p>If your idea has a fatal flaw, <span class="mark">I will say so.</span></p>
+        <p>If your idea has a fatal flaw, <span class="mark">I will say so.</span> If your app has UX problems you can't see, I'll show you.</p>
       </div>
     </div>
   </section>
@@ -514,17 +563,18 @@
     <div class="container">
       <h2 class="audience-heading">Book a session if&hellip;</h2>
       <ul class="audience-list">
-        <li><span class="arrow">&rarr;</span> You're employed full-time and building something on the side</li>
-        <li><span class="arrow">&rarr;</span> You've been at it for weeks or months and aren't sure it's worth continuing</li>
-        <li><span class="arrow">&rarr;</span> You have ideas but can't figure out which one deserves your time</li>
-        <li><span class="arrow">&rarr;</span> You shipped an MVP but traction isn't happening and you don't know why</li>
+        <li><span class="arrow">&rarr;</span> You're building a side project with AI tools and aren't sure it's worth continuing</li>
+        <li><span class="arrow">&rarr;</span> You shipped something but traction isn't happening and you don't know why</li>
+        <li><span class="arrow">&rarr;</span> You've never done customer discovery and aren't sure where to start</li>
+        <li><span class="arrow">&rarr;</span> You suspect your app might look or feel off but can't pinpoint why</li>
         <li><span class="arrow">&rarr;</span> You want someone who'll be straight with you, not just supportive</li>
       </ul>
       <div class="skip-block">
-        <p class="skip-heading">Probably not the right fit if&hellip;</p>
-        <p class="skip-item">You just want to hear "great idea!" — ask ChatGPT, it'll always say yes</p>
-        <p class="skip-item">You need a co-founder, a developer, or funding advice</p>
-        <p class="skip-item">You haven't thought about the idea at all yet. Give it another week first.</p>
+        <p class="skip-heading">Not the right fit if&hellip;</p>
+        <p class="skip-item">You just want encouragement &mdash; ask ChatGPT, it'll always say yes.</p>
+        <p class="skip-item">You're a designer or PM &mdash; you already have the skills to evaluate this yourself.</p>
+        <p class="skip-item">You need a co-founder, a developer, or funding advice.</p>
+        <p class="skip-item">You haven't thought about the idea at all yet. Give it another week.</p>
       </div>
     </div>
   </section>
@@ -537,14 +587,15 @@
         <img src="KirillV.png" alt="Kirill" class="why-me-photo">
         <div>
           <div class="why-me-name">Kirill</div>
-          <div class="why-me-title">Senior Product Strategist</div>
+          <div class="why-me-title">UX Designer / 14 years / 30+ side projects</div>
         </div>
       </div>
       <blockquote>
-        <p>I'm a UX designer. 14 years, 30+ side projects. I've built with most of the AI and no-code tools you're probably using right now.</p>
-        <p>I've sent 300+ cold emails to an audience that didn't care. Built products that got zero signups. Treated "nice feedback from friends" as validation, more than once.</p>
-        <p>I didn't make millions from side projects. I made every first-timer mistake there is, and now I can usually spot them in about 10 minutes.</p>
-        <span class="highlight">You're paying for 14 years of mistakes compressed into one hour.</span>
+        <p>I've built with most of the AI and no-code tools you're probably using right now. Cursor, Lovable, Replit, Bolt &mdash; I've shipped with all of them.</p>
+        <p>I've also watched most of my projects fail. I've sent 300+ cold emails to an audience that didn't care. Built products that got zero signups. Treated "nice feedback from friends" as validation, more than once.</p>
+        <p>Here's what 30 failed and shipped projects taught me: the idea is usually not the problem. It's that you don't know who you're building for, you haven't validated demand, and your product has UX problems you can't see because you don't have design training.</p>
+        <p>I can usually spot all three in about 10 minutes.</p>
+        <span class="highlight">You're paying for 14 years of design expertise and product mistakes compressed into one hour.</span>
       </blockquote>
     </div>
   </section>
@@ -558,28 +609,28 @@
           <div class="step-number">1</div>
           <div class="step-content">
             <h3>Book a 60-minute session</h3>
-            <p>€75. Pick a time that works for you.</p>
+            <p>€75. Pick a time that works.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-number">2</div>
           <div class="step-content">
             <h3>Fill out a short intake form</h3>
-            <p>5 minutes. So I come prepared and we don't waste your time.</p>
+            <p>5 minutes. Tell me what you're building, who it's for, and share a link or screenshots. So I come prepared.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-number">3</div>
           <div class="step-content">
             <h3>We meet on video</h3>
-            <p>I ask the questions your friends won't. Structured, specific, based on what actually predicts whether a product will work.</p>
+            <p>I ask the questions nobody else will. About your idea, your users, and your product. Structured, specific, honest.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-number">4</div>
           <div class="step-content">
             <h3>Get your written summary</h3>
-            <p>Within 24 hours you get the writeup: what I found, what it means, what to do.</p>
+            <p>Within 24 hours: what I found, what it means, what to do next.</p>
           </div>
         </div>
       </div>
@@ -589,8 +640,8 @@
   <!-- CTA -->
   <section class="cta-section" id="book">
     <div class="container">
-      <h2>Stop wondering. Find out.</h2>
-      <p>€75 for an hour of honesty.</p>
+      <h2>Stop guessing. Find out.</h2>
+      <p>€75 for one hour of honesty.</p>
       <a href="https://buy.stripe.com/dRmaEX03agOx8Nl5andAk04" class="cta-btn">Book your session</a>
     </div>
   </section>
@@ -602,19 +653,23 @@
       <div class="faq-list">
         <div class="faq-item">
           <h3>"Can't I just ask ChatGPT?"</h3>
-          <p>You can. It'll tell you your idea is interesting and give you a balanced analysis. It won't tell you you're wasting your time. It hasn't built 30 things and watched most of them fail. It can't read between the lines of your answers and spot the assumptions you don't even know you're making.</p>
+          <p>You can. It'll tell you your idea is interesting and suggest some improvements. It won't tell you you're solving a problem nobody has. It hasn't built 30 things and watched most of them fail. And it definitely can't look at your app and tell you why real users will bounce in 10 seconds.</p>
         </div>
         <div class="faq-item">
           <h3>"What if you tell me to kill my project?"</h3>
           <p>Then I saved you months of building something nobody wants. That's the most valuable outcome, even though it doesn't feel like it.</p>
         </div>
         <div class="faq-item">
+          <h3>"I'm not a designer. Will I understand the UX feedback?"</h3>
+          <p>That's exactly who this is for. I won't throw jargon at you. I'll show you specific things in your app and explain why they're losing users, in plain language, with concrete fixes you can implement yourself.</p>
+        </div>
+        <div class="faq-item">
           <h3>"Do I need to have already built something?"</h3>
-          <p>No. Idea stage is fine. But you should have at least thought about who it's for and what problem it solves. If you just have a vague notion, spend another week thinking before booking.</p>
+          <p>Not required, but you'll get more value if you have. Even a rough prototype or mockup gives me something to react to. If you're at the pure idea stage, we'll focus on whether the idea is worth building at all before you invest more time.</p>
         </div>
         <div class="faq-item">
           <h3>"What if I disagree with your verdict?"</h3>
-          <p>That's fine. You're buying my analysis and perspective, not a binding decision. You might see something I don't. But at minimum, you'll know exactly which assumptions you're betting on.</p>
+          <p>Good. You're buying my analysis and perspective, not a binding decision. But at minimum, you'll know exactly which assumptions you're betting on &mdash; and that's worth more than building in the dark.</p>
         </div>
       </div>
     </div>
