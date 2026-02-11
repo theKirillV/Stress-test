@@ -5,7 +5,9 @@
       "WebFetch(domain:fonts.googleapis.com)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Read(//Users/kirillv/.claude/**)",
+      "Bash(npx:*)"
     ]
   }
 }
